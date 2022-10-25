@@ -5,7 +5,7 @@ bodyClass.split(" ").forEach((cls) => bdy.classList.add(cls));
 
 
 
-const calcBodyClass = "max-w-lg rounded overflow-hidden shadow-2x1 bg-pink-700 bg-opacity-75 bg-gradient-to-tr from-gray-800 flex"
+const calcBodyClass = "max-w-lg rounded overflow-hidden shadow-2x1 bg-gray-900 bg-opacity-55 bg-gradient-to-tr from-purple-800 flex"
 
 const calcBody = document.querySelector(".calcBody");
 
@@ -41,8 +41,11 @@ buttons.forEach((btn) => {
 
 function addClasses(button){
     const btnNumberClass = "hover:bg-green-500 border-green-500"
-    const btnClearClass = "hover:bg-red-500 border-red-500"
+    const btnClearClass = "hover:bg-orange-500 border-orange-500"
     const btnOpClass = "hover:bg-blue-500 border-blue-500"
+
+    const btnEqClass = "hover:bg-red-500 border-red-500"
+    const btnDecClass = "hover:bg-yellow-500 border-yellow-500"
 
 
 
@@ -52,6 +55,10 @@ function addClasses(button){
         btnOpClass.split(" ").forEach((cls) => button.classList.add(cls))
     } else if(button.classList.value === "clear"){
         btnClearClass.split(" ").forEach((cls) => button.classList.add(cls))
+    }else if(button.classList.value === "equal"){
+        btnEqClass.split(" ").forEach((cls) => button.classList.add(cls))
+    }else if(button.classList.value === "decimal"){
+        btnDecClass.split(" ").forEach((cls) => button.classList.add(cls))
     }
 
 
